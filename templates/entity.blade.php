@@ -32,14 +32,16 @@ class {{ $entity }} extends AbstractEntity
     *
     * @throws ValidationException
     */
-    public function __construct(string $myProperty) {
+    public function __construct(string $myProperty)
+    {
         $this->setMyProperty($myProperty);
     }
 
     /**
     * @return string
     */
-    public function getMyProperty():string {
+    public function getMyProperty(): string
+    {
         return $this->myProperty;
     }
 
@@ -48,8 +50,9 @@ class {{ $entity }} extends AbstractEntity
     *
     * @throws ValidationException
     */
-    private function setMyProperty(string $myProperty):void {
-        if (empty($myProperty)) {
+    private function setMyProperty(string $myProperty): void
+    {
+        if ($myProperty !== '') {
             throw new ValidationException('myProperty', 'Empty');
         }
     }
