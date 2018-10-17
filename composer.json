@@ -1,0 +1,43 @@
+{
+  "name": "jeeno/laravel-integration",
+  "description": "",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christian Nastasi",
+      "email": "christian.nastasi@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "jeeno/core": "^0.1",
+    "illuminate/support": "^5.7",
+    "laravel-doctrine/orm": "^1.4",
+    "laravel-doctrine/extensions": "^1.0",
+    "doctrine/orm": "^2.6",
+    "gedmo/doctrine-extensions": "^2.4"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "phpunit/phpunit": "^7.0",
+    "orchestra/testbench": "~3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jeeno\\LaravelIntegration\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Jeeno\\LaravelIntegration\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Jeeno\\LaravelIntegration\\JeenoLaravelIntegrationServiceProvider"
+      ]
+    }
+  }
+}
